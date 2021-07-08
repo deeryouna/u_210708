@@ -495,9 +495,15 @@ input, a, img, span, label, select {
         .join .inner table td > p.error {
           display: block; }
 
+body {
+  width: 100%;
+  overflow-x: hidden; }
+
 #header {
   width: 100%;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 2; }
   #header .inner {
     width: 1180px;
     height: 120px;
@@ -522,10 +528,37 @@ input, a, img, span, label, select {
         float: left; }
         #header .inner .menuWeb #gnb li a {
           display: block;
-          padding: 20px 40px;
-          font: bold 15px/1 'Noto Sans KR';
+          padding: 0px 40px;
+          height: 50px;
+          font: bold 15px/50px 'Noto Sans KR';
           color: #555;
           transition: all 0.7s; }
+        #header .inner .menuWeb #gnb li .sub {
+          width: 1180px;
+          height: 300px;
+          position: absolute;
+          top: 51px;
+          right: 0px;
+          display: none;
+          background: #fff; }
+          #header .inner .menuWeb #gnb li .sub::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: -100%;
+            background: inherit; }
+          #header .inner .menuWeb #gnb li .sub::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: -100%;
+            background: inherit; }
         #header .inner .menuWeb #gnb li:hover a {
           background: #67625d;
           color: #fff; }
@@ -635,7 +668,8 @@ input, a, img, span, label, select {
   height: 500px;
   background: #fcf8f4;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 1; }
   #visual .inner {
     width: 1180px;
     margin: 0 auto;

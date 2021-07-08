@@ -1,6 +1,9 @@
 @charset 'utf-8';
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap");
 
+$tablet:1179px; 
+$mobile:539px; 
+
 @import "reset.scss";
 @import "sub_layout.scss";
 @import "community.scss";
@@ -8,9 +11,15 @@
 @import "youtube.scss";
 @import "join.scss";
 
+body {
+	width: 100%; 
+	overflow-x: hidden;}
+
 #header{
     width:100%; 
     border-bottom:1px solid #ddd; 
+	position: relative;
+	z-index: 2;
 
     .inner{
         width:1180px; 
@@ -42,16 +51,41 @@
                 }
                 li{
                     float:left; 
-                    a{
+					a{
                         display:block; 
-                        padding:20px 40px; 
-                        font:bold 15px/1 'Noto Sans KR'; 
+                        padding: 0px 40px; 
+						height: 50px;
+                        font:bold 15px/50px 'Noto Sans KR'; 
                         color:#555; 
                         transition:all 0.7s;
+                    }					
+
+					.sub {
+                        width: 1180px; 
+						height: 300px; 
+						position: absolute; 
+						top: 51px; 
+						right: 0px; 
+						display: none;
+                        background: #fff;
+
+                        &::before {
+                            content: ""; 
+							width: 100%; 
+							height: 100%; 
+							display: block;  position: absolute; top: 0px; 
+							left: -100%; background: inherit;
+                        }
+                        &::after {
+                            content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0px; right: -100%; background: inherit;    
+                        }
                     }
+
+                    
                     &:hover a {
                         background:#67625d; color:#fff; 
                     } 
+					
                 }
             }
 
@@ -196,6 +230,7 @@
 	background: #fcf8f4;
 	position: relative;
 	overflow: hidden;
+	z-index: 1;
 
 	.inner {
 		width: 1180px;
