@@ -49,43 +49,39 @@ body {
                     display:block; 
                     clear:both; 
                 }
-                li{
+                >li{
                     float:left; 
-					a{
-                        display:block; 
-                        padding: 0px 40px; 
-						height: 50px;
-                        font:bold 15px/50px 'Noto Sans KR'; 
-                        color:#555; 
-                        transition:all 0.7s;
-                    }					
 
-					.sub {
-                        width: 1180px; 
-						height: 300px; 
-						position: absolute; 
-						top: 51px; 
-						right: 0px; 
-						display: none;
+                    >a{
+                        display:block; 
+                        padding:0px 40px; 
+                        height: 50px;
+                        font:bold 15px/50px 'arial'; 
+                        color:#555; 
+                        transition:all 0.5s;
+
+                        &:hover a {
+                            background:#555; color:#fff; 
+                        } 
+                    }
+                    .sub {
+                        width: 1180px; height: 300px; position: absolute; top: 51px; right: 0px; display: none;
                         background: #fff;
 
+                        .left {
+                            width: 30%; height: 100%; background: lightgreen; float: left;
+                        }
+                        .right {
+                            width: 70%; height: 100%; background: #fff; float: right;
+                        }
+
                         &::before {
-                            content: ""; 
-							width: 100%; 
-							height: 100%; 
-							display: block;  position: absolute; top: 0px; 
-							left: -100%; background: inherit;
+                            content: ""; width: 100%; height: 100%; display: block;  position: absolute; top: 0px; left: 100%; background: #fff;
                         }
                         &::after {
-                            content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0px; right: -100%; background: inherit;    
+                            content: ""; display: block; width: 100%; height: 100%; position: absolute; top: 0px; right: 100%; background: lightgreen;    
                         }
-                    }
-
-                    
-                    &:hover a {
-                        background:#67625d; color:#fff; 
-                    } 
-					
+                    }                    
                 }
             }
 
@@ -99,7 +95,7 @@ body {
                     float:left;
                     a{
                         display:block; 
-                        font:12px/1 'Noto Sans KR'; 
+                        font:12px/1 'arial'; 
                         color:#999; 
                         padding:0px 10px; 
                         border-right:1px solid #aaa; 
