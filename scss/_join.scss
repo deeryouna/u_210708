@@ -1,0 +1,49 @@
+@charset 'utf-8'; 
+ 
+.join {
+    padding: 0px  0px 150px;
+    
+    .inner{        
+       table {
+           width: 100%; border-top: 2px solid #111; border-bottom: 1px solid #111;
+
+           th, td {
+               border-bottom: 1px solid #ddd; padding: 15px 30px; 
+            }
+           th {
+               width: 25%; text-align: right;
+               &:last-child { text-align: center;}
+
+               input[type=reset], input[type=submit] {
+                   width: 30%; height: 40px; margin: 0px 10px; cursor: pointer;
+               }
+           }
+           td {
+               width: 75%; 
+
+               input[type=text], input[type=password], select {
+                    width: 30%; padding: 5px 10px;
+
+                    &.error {
+                        border: 1px solid hotpink; background: lavenderblush;
+                    }
+               }
+               input[type=checkbox], input[type=radio] {
+                   margin-right: 30px; 
+               }
+               textarea {
+                   width: 61%; padding: 10px; resize: none;
+
+                   &.error {
+                        border: 1px solid hotpink; background: lavenderblush;
+                    }
+               }
+               >p {
+                   font: 12px/1 "맑은 고딕"; color: hotpink; display: none; margin-top: 5px;
+
+                   &.error {display: block;}
+               }
+           }
+       }
+    }
+}

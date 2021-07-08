@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimU</title>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/custom.js"></script>
+    <script defer src="js/join.js"></script>
+
+</head>
+<body>
+<header id="header_sub">
+	<div class="inner">
+		<h1><a href="index.html">DCODELAB</a></h1>
+
+		<nav class="menuWeb">
+			<ul id="gnb">
+				<li><a href="department.html">DEPARTMENT</a></li>	
+				<li><a href="youtube.html">YOUTUBE</a></li>
+				<li><a href="community.html">COMMUNITY</a></li>
+				<li><a href="gallery.html">GALLERY</a></li>
+				<li><a href="location.html">LOCATION</a></li>
+			</ul>
+
+			<ul class="util">
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Help</a></li>
+				<li><a href="join.html">Join</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</ul>
+		</nav>
+
+		<a href="#" class="btnCall">
+			<span>메뉴호출</span>
+		</a>
+
+		<nav class="menuMo">
+			<h1>
+				<a href="index.html">DCODELAB</a>
+				<span>UI/UX DEVELOPMENT INSTITUTE</span>
+			</h1>
+
+			<ul id="gnbMo">
+				<li><a href="department.html">DEPARTMENT</a></li>	
+				<li><a href="youtube.html">YOUTUBE</a></li>
+				<li><a href="community.html">COMMUNITY</a></li>
+				<li><a href="gallery.html">GALLERY</a></li>
+				<li><a href="location.html">LOCATION</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<section class="content join">
+	<div class="sub_visual"></div>
+	<div class="inner">
+		<h1>JOIN<span>회원가입</span>  </h1>
+		
+		<form action="result.html" method="get">
+			<fieldset>
+				<legend class="hidden">MEMBERSHIP</legend>
+
+				<table summary="회원 가입 인증 폼">
+					<caption class="hidden">회원가입 인증 테이블</caption>
+					<tbody>
+						<tr>
+							<th scope="row"><label for="userid">USER ID</label></th>
+							<td>
+								<input type="text" id="userid" name="userid" placeholder="아이디를 입력하세요">
+								<p>아이디는 5글자 입력해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="pwd1">PASSWORD</label></th>
+							<td>
+								<input type="password" id="pwd1" name="pwd1" placeholder="비밀번호를 입력하세요">
+								<p>비밀번호를 2개 모두 입력하세요</p>
+								<p>비밀번호는 2개는 같아야 합니다.</p>
+								<p>비밀번호는 5글자 이상 입력하세요</p>
+								<p>비밀번호는 숫자를 포함하세요</p>
+								<p>비밀번호는 특수문자를 포함하세요</p>
+								<p>비밀번호는 문자를 포함하세요</p>
+								
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="pwd2">RE PASSWORD</label></th>
+							<td>
+								<input type="password" id="pwd2" name="pwd2" placeholder="비밀번호를 재 입력하세요">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">GENDER</th>
+							<td>								
+								<label for="male">Male</label> <input type="radio" id="male" name="gender" value="male">
+								<label for="female">Male</label> <input type="radio" id="female" name="gender" value="female"> 
+								<p>성별을 선택해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">INTERESTES</th>
+							<td>								
+								<label for="sport">Sports</label> <input type="checkbox" name="hobby" value="sports" id="sports">
+								<label for="music">Music</label> <input type="checkbox" name="hobby" value="music" id="music">
+								<label for="sport">Game</label> <input type="checkbox" name="hobby" value="game" id="game">
+								<label for="sport">Reading</label> <input type="checkbox" name="hobby" value="reading" id="reading">
+								<p>취미를 선택해주세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="email">E-MAIL</label></th>
+							<td>
+								<input type="text" name="email1" id="email" placeholder="이메일 아이디를 입력하세요.">
+								<label for="email2" class="hidden">메일 서비스계정을 선택하세요</label>
+								<select name="email2" id="email2">
+									<option value="">이메일 서비스를 선택하세요.</option>
+									<option value="naver.com">@naver.com</option>
+									<option value="nate.com">@nate.com</option>
+									<option value="gmail.com">@gmail.com</option>
+								</select>
+								<p>이메일 계정아이디 입력하세요</p>
+								<p>이메일 서비스를 선택하세요</p>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row"><label for="comments">LEAVE MESSEGE</label></th>
+							<td>
+								<textarea name="comments" id="comments" cols="30" rows="10" placeholder="메세지를 남겨주세요."></textarea>
+								<p>코멘트를 입력하세요.</p>
+							</td>
+						</tr>
+						<tr>
+							<th colspan="2">
+								<input type="reset" value="CANCEL">
+								<input type="submit" value="SUBMIT">
+							</th>
+						</tr>
+					</tbody>
+				</table>
+			</fieldset>
+		</form>
+	</div>
+</section>
+
+
+<footer id="footer_sub">
+	<div class="inner">
+		<h1>DCODELAB</h1>
+		<ul>
+			<li><a href="#">Policy</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Customer</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+
+		<address>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, voluptas. <br>
+			TEL : 031-123-3456  C.P : 010-123-3456
+		</address>
+
+		<p>2021 DCODELAB &copy; copyright all right reserved.</p>
+	</div>
+</footer>
+</body>
+</html>

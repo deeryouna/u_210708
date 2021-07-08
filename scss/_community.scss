@@ -1,0 +1,97 @@
+@charset 'utf-8'; 
+ 
+.community{
+        
+    .sub_visual{
+        background:#ece8e5;
+        position: relative;
+                
+        h1{
+            position: absolute;
+            top: 35%;
+            left: 43vw;
+            text-align: center;
+            font-family: 'Noto Sans KR';
+            color: #727272;
+        }
+    }
+
+    .inner{
+        table{
+            width:100%; 
+            border-bottom:2px solid #e4cdb9; 
+            margin-bottom:50px; 
+            border-collapse: collapse;
+
+            tr{
+                
+                &:hover td{
+                    background:#ece8e5;
+                    transition: all 0.8s;
+                }
+                
+                th{
+                    padding:15px; background: #67625d; color:#fff; 
+                    font-family: '본고딕';
+                    font-size: 15px;
+                                        
+                    &:nth-of-type(1){ width:10%; }                
+                    &:nth-of-type(3){ width:18%; }
+                    &:nth-of-type(4){ width:15%; }
+                 }
+                 td{
+                    padding:13px; border-bottom:1px solid #ddd; 
+                    font-family: '본고딕';
+                    font-size: 13px;
+                    text-align:center; 
+                    color:#727272;
+     
+                    &:nth-of-type(2){ text-align:left; font-family: '본고딕'; font-size: 13px;}
+                    &:nth-of-type(3) { font-family: '본고딕'; }
+                    a{ float:left; color:#727272; font-family: '본고딕';}
+                 }
+            }            
+        }
+
+        .pagination{
+            width:100%; text-align:center; 
+
+            &::after{
+                content:''; display:block; clear:both; 
+            }
+            .prev{
+                float:left; 
+                display:block; 
+                width:30px; height:30px; background:#fff; 
+                font-size:20px; color:#777; text-align:center; 
+            }
+            .next{
+                float:right; 
+                display:block; 
+                width:30px; height:30px; background:#fff; 
+                font-size:20px; color:#777; text-align:center; 
+            }
+            .numbers{
+                display:inline-block; text-align:center; 
+                font-size:0; 
+                a{ 
+                    display:inline-block; 
+                    width:30px; height:30px; 
+                    font:11px/30px '본고딕'; color:#666; 
+                    text-align:center; 
+                    margin:0 5px; transition:0.5s; 
+
+                    &.on{
+                        background:#f3e9dd; color:#666; 
+                        border-radius: 30px;
+                        font-weight: bold;
+                    }
+
+                    &:hover{
+                        font-weight: bold; 
+                    }
+                }
+            }
+        }
+    }
+}
