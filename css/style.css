@@ -633,7 +633,7 @@ input, a, img, span, label, select {
 #visual {
   width: 100%;
   height: 500px;
-  background: #fcf8f4;
+  background: lightgreen;
   position: relative;
   overflow: hidden; }
   #visual .inner {
