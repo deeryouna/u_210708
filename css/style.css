@@ -48,17 +48,57 @@ input, a, img, span, label, select {
         content: '';
         display: block;
         clear: both; }
-      #header_sub .inner .menuWeb #gnb li {
+      #header_sub .inner .menuWeb #gnb > li {
         float: left; }
-        #header_sub .inner .menuWeb #gnb li a {
+        #header_sub .inner .menuWeb #gnb > li > a {
           display: block;
-          padding: 20px 40px;
-          font: bold 15px/1 'Noto Sans KR';
+          padding: 0px 40px;
+          height: 50px;
+          font: bold 15px/50px 'arial';
           color: #555;
           transition: all 0.5s; }
-        #header_sub .inner .menuWeb #gnb li:hover a {
-          background: #67625d;
-          color: #fff; }
+          #header_sub .inner .menuWeb #gnb > li > a:hover a {
+            background: #555;
+            color: #fff; }
+        #header_sub .inner .menuWeb #gnb > li .sub {
+          width: 1180px;
+          height: 300px;
+          position: absolute;
+          top: 51px;
+          right: 0px;
+          display: none;
+          background: #fff;
+          border: 1px solid #bbb; }
+          #header_sub .inner .menuWeb #gnb > li .sub .left {
+            width: 30%;
+            height: 100%;
+            background: lightgreen;
+            float: left; }
+          #header_sub .inner .menuWeb #gnb > li .sub .right {
+            width: 70%;
+            height: 100%;
+            background: #fff;
+            float: right; }
+          #header_sub .inner .menuWeb #gnb > li .sub::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            background: #fff;
+            border: 1px solid #bbb; }
+          #header_sub .inner .menuWeb #gnb > li .sub::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            right: 100%;
+            background: lightgreen;
+            border: 1px solid #bbb; }
     #header_sub .inner .menuWeb .util {
       position: absolute;
       top: 20px;
@@ -67,7 +107,7 @@ input, a, img, span, label, select {
         float: left; }
         #header_sub .inner .menuWeb .util li a {
           display: block;
-          font: 12px/1 'Noto Sans KR';
+          font: 12px/1 'arial';
           color: #999;
           padding: 0px 10px;
           border-right: 1px solid #aaa; }
@@ -220,16 +260,6 @@ input, a, img, span, label, select {
       display: block;
       clear: both; }
 
-.community .sub_visual {
-  background: #ece8e5;
-  position: relative; }
-  .community .sub_visual h1 {
-    position: absolute;
-    top: 35%;
-    left: 43vw;
-    text-align: center;
-    font-family: 'Noto Sans KR';
-    color: #727272; }
 .community .inner table {
   width: 100%;
   border-bottom: 2px solid #e4cdb9;
@@ -495,6 +525,11 @@ input, a, img, span, label, select {
         .join .inner table td > p.error {
           display: block; }
 
+#map {
+  width: 100%;
+  height: 400px;
+  background: #000; }
+
 body {
   width: 100%;
   overflow-x: hidden; }
@@ -543,7 +578,8 @@ body {
           top: 51px;
           right: 0px;
           display: none;
-          background: #fff; }
+          background: #fff;
+          border: 1px solid #bbb; }
           #header .inner .menuWeb #gnb > li .sub .left {
             width: 30%;
             height: 100%;
@@ -562,7 +598,8 @@ body {
             position: absolute;
             top: 0px;
             left: 100%;
-            background: #fff; }
+            background: #fff;
+            border: 1px solid #bbb; }
           #header .inner .menuWeb #gnb > li .sub::after {
             content: "";
             display: block;
@@ -571,7 +608,8 @@ body {
             position: absolute;
             top: 0px;
             right: 100%;
-            background: lightgreen; }
+            background: lightgreen;
+            border: 1px solid #bbb; }
     #header .inner .menuWeb .util {
       position: absolute;
       top: 20px;
